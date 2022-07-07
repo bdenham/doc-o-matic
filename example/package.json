@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "example",
+  "version": "0.0.1",
+  "dependencies": {
+    "@adobe/gatsby-theme-aio": "*",
+    "gatsby": "^4.17.2"
+  },
+  "scripts": {
+    "start": "gatsby build && gatsby serve",
+    "start:prefix": "gatsby build --prefix-paths && gatsby serve --prefix-paths",
+    "develop": "gatsby develop --host 0.0.0.0",
+    "develop:https": "gatsby develop --https --host localhost.corp.adobe.com --port 9000",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  }
+}
