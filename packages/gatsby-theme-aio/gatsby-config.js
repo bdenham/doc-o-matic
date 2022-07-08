@@ -67,7 +67,6 @@ module.exports = {
         rehypePlugins: [
           require(`rehype-slug`),
         ],
-        // plugins: [`gatsby-transformer-remark`, `gatsby-remark-copy-linked-files`, `gatsby-remark-images`],
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-transformer-remark`,
@@ -116,8 +115,8 @@ module.exports = {
         queries: algoliaQueries,
         chunkSize: 10000, // default: 1000
         concurrentQueries: false, // default: true
-        dryRun: ALGOLIA_INDEXING_MODES[algoliaIndexingMode], // default: true. skipIndexing was removed in v0.26.0.
-        continueOnFailure: false, // default: false, don't fail the build if algolia indexing fails
+        dryRun: ALGOLIA_INDEXING_MODES[algoliaIndexingMode], // default: true. skipIndexing was removed in v0.26.0
+        continueOnFailure: true, // default: false. But we want `true` because the plugin will skip indexing but continue the build if the appId, apiKey, or indexName is missing
         settings: {
           searchableAttributes: ['contentHeading', 'title', 'description,content'],
           attributesForFaceting: ['searchable(keywords)'],
@@ -126,7 +125,6 @@ module.exports = {
           attributeForDistinct: 'url',
           snippetEllipsisText: '…',
           attributesToRetrieve: [
-            process.env.REPO_NAME, // Only retrieve the current repo's records. Prevents deletion of other repo records.
             'title',
             'contentHeading',
             'description',
