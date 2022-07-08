@@ -76,7 +76,7 @@ const searchSuggestions = async (algolia, query, searchIndex, indexAll) => {
       query,
       params: {
         hitsPerPage: Math.ceil(SUGGESTION_MAX_RESULTS / searchIndex.length),
-        attributesToRetrieve: ['objectID', 'url', 'title', 'description']
+        attributesToRetrieve: ['id', 'url', 'title', 'description']
       }
     });
   });
@@ -98,7 +98,7 @@ const searchIndexes = async (algolia, query, selectedIndex, indexAll, keywords) 
       query,
       params: {
         facets: [SEARCH_KEYWORDS],
-        attributesToRetrieve: ['objectID', 'url'],
+        attributesToRetrieve: ['id', 'url'],
         hitsPerPage: Math.ceil(SEARCH_MAX_RESULTS / selectedIndex.length),
         filters: keywords.map((keyword) => `${SEARCH_KEYWORDS}:"${keyword}"`).join(' AND ')
       }
@@ -109,13 +109,13 @@ const searchIndexes = async (algolia, query, selectedIndex, indexAll, keywords) 
 };
 
 const mapSearchResults = (hits, results) => {
-  hits.forEach(({ objectID, url, _highlightResult }) => {
+  hits.forEach(({ id, url, _highlightResult }) => {
     // TODO corrupted record url check
     if (!isExternalLink(url)) {
       // Verify url is unique
       if (!results.find((result) => result.url === url)) {
         results.push({
-          objectID,
+          id,
           url,
           _highlightResult
         });
@@ -432,7 +432,7 @@ const Search = ({ algolia, searchIndex, indexAll, showSearch, setShowSearch, sea
                   const to = `${location.origin}${searchSuggestion.url}`;
 
                   return (
-                    <MenuItem key={searchSuggestion.objectID} href={to}>
+                    <MenuItem key={searchSuggestion.id} href={to}>
                       <div
                         css={css`
                           mark,

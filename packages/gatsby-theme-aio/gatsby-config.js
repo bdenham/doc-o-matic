@@ -115,8 +115,6 @@ module.exports = {
         indexName: process.env.ALGOLIA_INDEX_NAME,
         queries: algoliaQueries,
         chunkSize: 10000, // default: 1000
-        enablePartialUpdates: true, // default: false
-        matchFields: ['contentDigest'], // v0.26.0 requirement
         concurrentQueries: false, // default: true
         dryRun: ALGOLIA_INDEXING_MODES[algoliaIndexingMode], // default: true. skipIndexing was removed in v0.26.0.
         continueOnFailure: false, // default: false, don't fail the build if algolia indexing fails

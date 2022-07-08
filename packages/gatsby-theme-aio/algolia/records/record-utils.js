@@ -34,11 +34,11 @@ const createRawRecordsBasedOnHtml = (fileContent, options) => {
 };
 
 const createAlgoliaRecords = (node, records) => {
-  let { mdxAST, slug, objectID, contentDigest, wordCount, title, description, headings, ...restNodeFields } = node;
+  let { mdxAST, slug, id, contentDigest, wordCount, title, description, headings, ...restNodeFields } = node;
 
   return records.map((record) => {
     const algoliaRecord = {
-      objectID: record.objectID ?? uuidv4(record.value.toString()),
+      id: record.id ?? uuidv4(record.value.toString()),
       title: getTitle(title, node),
       description: getDescription(description, node, record),
       ...restNodeFields,
@@ -51,7 +51,6 @@ const createAlgoliaRecords = (node, records) => {
       anchor: record.html ? getAnchorLink(record.headings) : getAnchorLink(getHeadings(node, record)),
       url: getUrl(slug, node, record),
       customRanking: record.customRanking ?? '',
-      // TODO: model should not have dependencies on env vars (should be wrapped in config object)
       contentDigest
     };
     return algoliaRecord;
