@@ -21,7 +21,7 @@ const AlgoliaQueryBuilder = require('./algolia/query-builder');
 const algoliaQueries = new AlgoliaQueryBuilder().build();
 let algoliaIndexingMode = process.env.ALGOLIA_INDEXATION_MODE;
 
-if (!ALGOLIA_INDEXING_MODES[algoliaIndexingMode]) {
+if (ALGOLIA_INDEXING_MODES[algoliaIndexingMode] == null) {
   algoliaIndexingMode = ALGOLIA_DEFAULT_INDEXING_MODE;
   console.warn(
     `Algolia: Wrong value for ALGOLIA_INDEXATION_MODE. Should be [${Object.keys(ALGOLIA_INDEXING_MODES).join(
@@ -114,12 +114,11 @@ module.exports = {
         apiKey: process.env.ALGOLIA_WRITE_API_KEY,
         indexName: process.env.ALGOLIA_INDEX_NAME,
         queries: algoliaQueries,
-        chunkSize: 1000, // default: 1000
+        chunkSize: 10000, // default: 1000
         enablePartialUpdates: true, // default: false
-        matchFields: [process.env.REPO_NAME], // Array<String> default: ['modified']
+        matchFields: ['contentDigest'], // v0.26.0 requirement
         concurrentQueries: false, // default: true
-        skipIndexing: ALGOLIA_INDEXING_MODES[algoliaIndexingMode][0], // default: true
-        dryRun: ALGOLIA_INDEXING_MODES[algoliaIndexingMode][1], // default: false
+        dryRun: ALGOLIA_INDEXING_MODES[algoliaIndexingMode], // default: true. skipIndexing was removed in v0.26.0.
         continueOnFailure: false, // default: false, don't fail the build if algolia indexing fails
         settings: {
           searchableAttributes: ['contentHeading', 'title', 'description,content'],

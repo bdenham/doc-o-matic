@@ -46,14 +46,13 @@ const createAlgoliaRecords = (node, records) => {
       previousHeadings: record.html ? record.headings : getHeadings(node, record),
       contentHeading: record.html ? record.headings.slice(-1)[0] : getHeadings(node, record).slice(-1)[0],
       content: record.content ?? record.value,
-      slug: slug,
+      slug,
       words: wordCount.words,
       anchor: record.html ? getAnchorLink(record.headings) : getAnchorLink(getHeadings(node, record)),
       url: getUrl(slug, node, record),
-      absoluteUrl: getAbsoluteUrl(slug, node, record),
       customRanking: record.customRanking ?? '',
       // TODO: model should not have dependencies on env vars (should be wrapped in config object)
-      [process.env.REPO_NAME]: contentDigest
+      contentDigest
     };
     return algoliaRecord;
   });
@@ -96,11 +95,7 @@ function getAnchorLink(linkHeadings) {
 
 function getUrl(slug, node, record) {
   let anchor = record.html ? getAnchorLink(record.headings) : getAnchorLink(getHeadings(node, record));
-  return `${process.env.PATH_PREFIX}${slug}${anchor}`;
-}
-
-function getAbsoluteUrl(slug, node, record) {
-  return `${process.env.AIO_FASTLY_PROD_URL}${getUrl(slug, node, record)}`;
+  return `${process.env.AIO_FASTLY_PROD_URL || 'https://developer.adobe.com' }${process.env.PATH_PREFIX}${slug == null ? '': slug}${anchor}`;
 }
 
 const removeDuplicateRecords = (records) => {

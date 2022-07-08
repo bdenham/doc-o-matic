@@ -225,5 +225,5 @@ module.exports = {
   plugins: [
     `@adobe/gatsby-theme-aio`
   ],
-  pathPrefix: '/example/'
+  pathPrefix: process.env.PATH_PREFIX || '/example/'
 };
