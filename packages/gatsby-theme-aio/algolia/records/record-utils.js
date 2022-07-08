@@ -38,7 +38,7 @@ const createAlgoliaRecords = (node, records) => {
 
   return records.map((record) => {
     const algoliaRecord = {
-      id: record.id ?? uuidv4(record.value.toString()),
+      id: id ?? uuidv4(record.value.toString()),
       title: getTitle(title, node),
       description: getDescription(description, node, record),
       ...restNodeFields,
