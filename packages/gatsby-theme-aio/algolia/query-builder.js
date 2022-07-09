@@ -47,7 +47,7 @@ class QueryBuilder {
                 prettySize
                 extension
                 childMdx {
-                  objectID: id
+                  id: id
                   fileAbsolutePath
                   frontmatter {
                     title
