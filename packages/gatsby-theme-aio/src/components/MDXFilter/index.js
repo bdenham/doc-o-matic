@@ -130,7 +130,7 @@ const filterChildren = ({ childrenArray, query, hasSideNav }) => {
 };
 
 export default ({ children, pageContext, query }) => {
-  const { hasSideNav, siteMetadata, location, allSitePage, allMdx, allGithubData } = useContext(Context);
+  const { hasSideNav, siteMetadata, location, allSitePage, allMdx, githubData } = useContext(Context);
   const isTranscludedContent = typeof pageContext === 'undefined';
   let childrenArray = Children.toArray(children);
 
@@ -164,8 +164,8 @@ export default ({ children, pageContext, query }) => {
     const tableOfContents = tableOfContentsObj?.tableOfContents ?? {};
 
     // Github
-    const { repository } = allGithubData?.nodes[0].data;
-    const defaultBranch = repository?.defaultBranchRef;
+    const { repository } = githubData?.data;
+    const defaultBranch = repository?.defaultBranchRef.name;
     const repoRoot = process.env.REPO_ROOT;
     const pagePath = componentPath.replace(/.*\/src\/pages\//g, '');
 
@@ -340,8 +340,8 @@ export default ({ children, pageContext, query }) => {
                       `}>
                       <GitHubActions
                         repository={repository.name}
-                        branch={defaultBranch.name}
-                        root={repoRoot ?? defaultBranch.name}
+                        branch={defaultBranch}
+                        root={repoRoot ?? defaultBranch}
                         pagePath={pagePath}
                       />
                     </div>
