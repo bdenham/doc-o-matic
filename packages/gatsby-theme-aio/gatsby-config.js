@@ -64,18 +64,16 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve(`./src/components/MDXFilter/index.js`)
         },
-        rehypePlugins: [
-          require(`rehype-slug`),
-        ],
+        rehypePlugins: [require(`rehype-slug`)],
         gatsbyRemarkPlugins: [
           {
-            resolve: `gatsby-transformer-remark`,
+            resolve: `gatsby-transformer-remark`
           },
           {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
               ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`, `md`, `mdx`],
-              destinationDir: `assets`,
+              destinationDir: `assets`
             }
           },
           {
@@ -89,21 +87,24 @@ module.exports = {
               disableBgImage: true,
               backgroundColor: 'none'
             }
-          },
+          }
         ]
       }
     },
     {
-      resolve: `@adobe/gatsby-source-github-file-contributors`,
+      resolve: `gatsby-source-github-api`,
       options: {
-        root: process.env.REPO_ROOT,
-        repo: {
-          token: process.env.REPO_GITHUB_TOKEN,
-          owner: process.env.REPO_OWNER,
-          name: process.env.REPO_NAME,
-          branch: process.env.REPO_BRANCH,
-          default_branch: process.env.REPO_DEFAULT_BRANCH
-        }
+        token: process.env.REPO_GITHUB_TOKEN,
+        graphQLQuery: `
+          query {
+            repository(owner:"${process.env.REPO_OWNER}", name:"${process.env.REPO_NAME}"){
+              name
+              defaultBranchRef {
+                name
+              }
+            }
+          }
+        `
       }
     },
     {
@@ -137,7 +138,6 @@ module.exports = {
             'extension',
             'contributor_name',
             'contributor_link',
-            'contributors',
             'slug',
             'words',
             'anchor',

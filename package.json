@@ -30,5 +30,8 @@
     "cy:open": "cypress open",
     "test:e2e": "start-server-and-test dev http://localhost:8000 cy:open"
   },
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@3.2.1",
+  "dependencies": {
+    "gatsby-source-github-api": "^1.0.0"
+  }
 }

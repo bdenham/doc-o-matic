@@ -23,22 +23,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/gatsby-source-github-file-contributors@npm:^0.3.1":
-  version: 0.3.1
-  resolution: "@adobe/gatsby-source-github-file-contributors@npm:0.3.1"
-  dependencies:
-    globby: ^11.0.1
-    graphql-fetch: ^1.0.1
-  checksum: 1bc44bed8144c30c5d1b20c4dc016bb2fad9d2a4eddb146b02e5097bf2b5cdb9d5fc7605b9bf45ed1e196fed1e577d56445c8d2742eb03f69c3369d2919f35bc
-  languageName: node
-  linkType: hard
-
 "@adobe/gatsby-theme-aio@*, @adobe/gatsby-theme-aio@workspace:packages/gatsby-theme-aio":
   version: 0.0.0-use.local
   resolution: "@adobe/gatsby-theme-aio@workspace:packages/gatsby-theme-aio"
   dependencies:
     "@adobe/focus-ring-polyfill": ^0.1.5
-    "@adobe/gatsby-source-github-file-contributors": ^0.3.1
     "@adobe/prism-adobe": ^1.0.3
     "@emotion/react": ^11.9.3
     "@loadable/component": ^5.15.2
@@ -6479,6 +6468,7 @@ __metadata:
     cypress: ^8.7.0
     cypress-axe: ^0.14.0
     gatsby-cypress: ^1.14.0
+    gatsby-source-github-api: ^1.0.0
     husky: ^8.0.1
     lerna: ^5.1.8
     start-server-and-test: ^1.14.0
@@ -12272,6 +12262,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-source-github-api@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "gatsby-source-github-api@npm:1.0.0"
+  dependencies:
+    graphql-fetch: ^1.0.1
+    uuid: ^3.1.0
+  checksum: 2d669875ad731159dcbcfca3e02d9f53419956295f94dbcf0d7a7c7674270fb6ab03420819f13b89c00e76c632366389641858f3fc664c83b67915acbe723105
+  languageName: node
+  linkType: hard
+
 "gatsby-telemetry@npm:^3.18.0":
   version: 3.18.0
   resolution: "gatsby-telemetry@npm:3.18.0"
@@ -12875,7 +12875,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:^11.0.1, globby@npm:^11.0.2, globby@npm:^11.0.3, globby@npm:^11.0.4, globby@npm:^11.1.0":
+"globby@npm:^11.0.2, globby@npm:^11.0.3, globby@npm:^11.0.4, globby@npm:^11.1.0":
   version: 11.1.0
   resolution: "globby@npm:11.1.0"
   dependencies:
@@ -23367,7 +23367,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"uuid@npm:^3.3.2":
+"uuid@npm:^3.1.0, uuid@npm:^3.3.2":
   version: 3.4.0
   resolution: "uuid@npm:3.4.0"
   bin:

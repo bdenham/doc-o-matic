@@ -34,7 +34,6 @@ import {
 } from '../../utils';
 
 import { Footer } from '../Footer';
-import { Contributors } from '../Contributors';
 import { Feedback } from '../Feedback';
 import { GitHubActions } from '../GitHubActions';
 import { Breadcrumbs } from '../Breadcrumbs';
@@ -131,8 +130,7 @@ const filterChildren = ({ childrenArray, query, hasSideNav }) => {
 };
 
 export default ({ children, pageContext, query }) => {
-  const { hasSideNav, siteMetadata, location, allSitePage, allMdx, allGithub, allGithubContributors } =
-    useContext(Context);
+  const { hasSideNav, siteMetadata, location, allSitePage, allMdx, allGithubData } = useContext(Context);
   const isTranscludedContent = typeof pageContext === 'undefined';
   let childrenArray = Children.toArray(children);
 
@@ -166,11 +164,9 @@ export default ({ children, pageContext, query }) => {
     const tableOfContents = tableOfContentsObj?.tableOfContents ?? {};
 
     // Github
-    const { repository, default_branch: branch, root } = allGithub?.nodes[0];
-    const contributorsObj = allGithubContributors?.nodes.find(
-      ({ path: fileAbsolutePath }) => fileAbsolutePath === componentPath
-    );
-    const contributors = contributorsObj?.contributors ?? [];
+    const { repository } = allGithubData?.nodes[0].data;
+    const defaultBranch = repository?.defaultBranchRef;
+    const repoRoot = process.env.REPO_ROOT;
     const pagePath = componentPath.replace(/.*\/src\/pages\//g, '');
 
     // Breadcrumbs
@@ -342,7 +338,12 @@ export default ({ children, pageContext, query }) => {
                           margin-top: var(--spectrum-global-dimension-size-200);
                         }
                       `}>
-                      <GitHubActions repository={repository} branch={branch} root={root} pagePath={pagePath} />
+                      <GitHubActions
+                        repository={repository.name}
+                        branch={defaultBranch.name}
+                        root={repoRoot ?? defaultBranch.name}
+                        pagePath={pagePath}
+                      />
                     </div>
                   </div>
                 )}
@@ -369,21 +370,6 @@ export default ({ children, pageContext, query }) => {
                       justify-content: space-between;
                       margin-bottom: var(--spectrum-global-dimension-size-200);
                     `}>
-                    <div>
-                      <Contributors
-                        repository={repository}
-                        branch={branch}
-                        root={root}
-                        pagePath={pagePath}
-                        contributors={contributors}
-                        externalContributors={pageContext?.frontmatter?.contributors}
-                        date={
-                          contributors[0]
-                            ? new Date(contributors[0].date).toLocaleDateString()
-                            : new Date().toLocaleDateString()
-                        }
-                      />
-                    </div>
                     <div
                       css={css`
                         @media screen and (max-width: ${DESKTOP_SCREEN_WIDTH}) {
