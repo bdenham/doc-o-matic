@@ -55,7 +55,6 @@ class QueryBuilder {
                     edition
                     contributor_name
                     contributor_link
-                    contributors
                     keywords
                     openAPISpec
                     frameSrc

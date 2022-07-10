@@ -170,21 +170,14 @@ export default ({ children, pageContext, location }) => {
   const data = useStaticQuery(
     graphql`
       query {
-        allGithub {
-          nodes {
-            repository
-            default_branch
-            root
-          }
-        }
-        allGithubContributors {
-          nodes {
-            contributors {
-              date
-              login
+        githubData {
+          data {
+            repository {
+              defaultBranchRef {
+                name
+              }
               name
             }
-            path
           }
         }
         allMdx {
@@ -256,7 +249,7 @@ export default ({ children, pageContext, location }) => {
     `
   );
 
-  const { allMdx, allSitePage, site, allGithub, allGithubContributors } = data;
+  const { allMdx, allSitePage, site, githubData } = data;
   const { siteMetadata, pathPrefix } = site;
   const { home, versions, pages, subPages, docs } = siteMetadata;
 
@@ -451,8 +444,7 @@ export default ({ children, pageContext, location }) => {
           pathPrefix,
           allSitePage,
           allMdx,
-          allGithub,
-          allGithubContributors
+          githubData
         }}>
         <SEO title={frontMatter?.title} description={frontMatter?.description} keywords={frontMatter?.keywords} />
         <div

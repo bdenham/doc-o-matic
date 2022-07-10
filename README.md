@@ -78,7 +78,6 @@ Using a theme, all of your default configuration lives in an npm package.
     - [Assets](#assets)
   - [Configuration](#configuration)
     - [Environment variables](#environment-variables)
-      - [GitHub Contributors](#github-contributors)
       - [Analytics and Feedback component](#analytics-and-feedback-component)
       - [Identity Management Services](#identity-management-services)
   - [Algolia indexing and search](#algolia-indexing-and-search)
@@ -107,6 +106,9 @@ Using a theme, all of your default configuration lives in an npm package.
     - [Deploy to Azure Storage Static Websites](#deploy-to-azure-storage-static-websites)
   - [Writing Enhanced Markdown](#writing-enhanced-markdown)
     - [Metadata with Front matter](#metadata-with-front-matter)
+  - [<pre>](#pre)
+  - [<pre>](#pre-1)
+  - [<pre>](#pre-2)
   - [hideBreadcrumbNav: false](#hidebreadcrumbnav-false)
     - [OpenAPI](#openapi)
   - [openAPISpec: https://raw.githubusercontent.com/AdobeDocs/analytics-2.0-apis/master/docs/swagger.json](#openapispec-httpsrawgithubusercontentcomadobedocsanalytics-20-apismasterdocsswaggerjson)
@@ -405,25 +407,6 @@ Follow these steps to configure your `.env` file.
 2. Add the appropriate values in the `.env` file
 
 **The .env should not be committed.**
-
-#### GitHub Contributors
-
-GitHub's API is being called during the site build phase to retrieve the authors of every markdown page under `src/pages`.
-If the GitHub Token information is missing, the build will just print a warning, and no contributor information will be retrieved (just the contributor information in a page's front matter, if any, will be used).
-
-To retrieve your GitHub personal access token, you can follow these [steps](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token).
-Only `READ` permissions on repositories are required for the token.
-For example, if your doc site repo was at https://github.com/adobe/aio-theme using the `main` branch, this would be what your `.env` would look like:
-
-```properties
-REPO_GITHUB_TOKEN=YOUR_PERSONAL_ACCESS_TOKEN_HERE
-REPO_OWNER=adobe
-REPO_NAME=aio-theme
-REPO_BRANCH=main
-REPO_ROOT=example
-```
-
-By default, you can omit the `ROOT` env var, and it should use the root folder as the source of the documentation pages. If your site is in a sub-folder, add the relative path as the `ROOT`.
 
 #### Analytics and Feedback component
 
@@ -968,21 +951,26 @@ Using the `Exclude a subfolder from deletion`: folders listed here separated out
 
 Front matter allows an author to specify metadata for a page. For example, you can define the page meta title and description by adding front matter to the beginning of your markdown file:
 
-<pre>
----
+## <pre>
+
 title: Guides - Adobe Analytics
 description: This is the guides overview page of Adobe Analytics
+
 ---
+
 </pre>
 
 In addition to the GitHub contributors of a markdown file, you can specify external contributors with front matter.
 They'll show up first before the GitHub contributors.
 
-<pre>
----
+## <pre>
+
 contributors:
+
 - https://github.com/simonwex
+
 ---
+
 </pre>
   
 You can also specify whether or not to hide breadcrumb navigation on pages without a hero at the top.  Pages with a Hero can flag the breadcrumb option on the Hero component if needed.
