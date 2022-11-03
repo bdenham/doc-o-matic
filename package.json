@@ -9,7 +9,7 @@
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@testing-library/cypress": "^8.0.3",
-    "axe-core": "^4.4.2",
+    "axe-core": "^4.5.1",
     "cypress": "^8.7.0",
     "cypress-axe": "^0.14.0",
     "gatsby-cypress": "^1.14.0",
