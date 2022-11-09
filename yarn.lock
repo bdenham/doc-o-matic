@@ -79,7 +79,7 @@ __metadata:
     gatsby-plugin-react-helmet: ^5.18.0
     gatsby-plugin-sharp: ^4.18.0
     gatsby-remark-copy-linked-files: ^5.18.0
-    gatsby-remark-images: ^6.18.0
+    gatsby-remark-images: ^7.0.0
     gatsby-source-filesystem: ^4.18.0
     gatsby-transformer-remark: ^5.18.0
     gatsby-transformer-sharp: ^4.18.0
@@ -2247,6 +2247,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@gatsbyjs/potrace@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "@gatsbyjs/potrace@npm:2.3.0"
+  dependencies:
+    jimp-compact: ^0.16.1-2
+  checksum: 237d4ccb9ac1ee321f1b2351b48ad1082252af2c181634da634292ba8e4bb15cb56bdfec3984c5c2d203befe86e93058976d26f52c30dee46f994741ef4a7f30
+  languageName: node
+  linkType: hard
+
 "@gatsbyjs/reach-router@npm:^1.3.6":
   version: 1.3.7
   resolution: "@gatsbyjs/reach-router@npm:1.3.7"
@@ -4052,9 +4061,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lmdb/lmdb-darwin-arm64@npm:2.5.3":
+  version: 2.5.3
+  resolution: "@lmdb/lmdb-darwin-arm64@npm:2.5.3"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@lmdb/lmdb-darwin-x64@npm:2.5.2":
   version: 2.5.2
   resolution: "@lmdb/lmdb-darwin-x64@npm:2.5.2"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@lmdb/lmdb-darwin-x64@npm:2.5.3":
+  version: 2.5.3
+  resolution: "@lmdb/lmdb-darwin-x64@npm:2.5.3"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -4066,9 +4089,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lmdb/lmdb-linux-arm64@npm:2.5.3":
+  version: 2.5.3
+  resolution: "@lmdb/lmdb-linux-arm64@npm:2.5.3"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@lmdb/lmdb-linux-arm@npm:2.5.2":
   version: 2.5.2
   resolution: "@lmdb/lmdb-linux-arm@npm:2.5.2"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@lmdb/lmdb-linux-arm@npm:2.5.3":
+  version: 2.5.3
+  resolution: "@lmdb/lmdb-linux-arm@npm:2.5.3"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
@@ -4080,9 +4117,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@lmdb/lmdb-linux-x64@npm:2.5.3":
+  version: 2.5.3
+  resolution: "@lmdb/lmdb-linux-x64@npm:2.5.3"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
 "@lmdb/lmdb-win32-x64@npm:2.5.2":
   version: 2.5.2
   resolution: "@lmdb/lmdb-win32-x64@npm:2.5.2"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@lmdb/lmdb-win32-x64@npm:2.5.3":
+  version: 2.5.3
+  resolution: "@lmdb/lmdb-win32-x64@npm:2.5.3"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -11857,6 +11908,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gatsby-core-utils@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "gatsby-core-utils@npm:4.0.0"
+  dependencies:
+    "@babel/runtime": ^7.15.4
+    ci-info: 2.0.0
+    configstore: ^5.0.1
+    fastq: ^1.13.0
+    file-type: ^16.5.3
+    fs-extra: ^10.1.0
+    got: ^11.8.5
+    import-from: ^4.0.0
+    lmdb: 2.5.3
+    lock: ^1.1.0
+    node-object-hash: ^2.3.10
+    proper-lockfile: ^4.1.2
+    resolve-from: ^5.0.0
+    tmp: ^0.2.1
+    xdg-basedir: ^4.0.0
+  checksum: fae6ff3819ae80f9ce0e0f346d71e7ccf23b2257225ffc1919004058784534c3e483886c3bcb3d7d27d6f9a1d1f12d9d4baab52bff9bee134eb0dd800b1d128d
+  languageName: node
+  linkType: hard
+
 "gatsby-cypress@npm:^1.14.0":
   version: 1.14.0
   resolution: "gatsby-cypress@npm:1.14.0"
@@ -12198,15 +12272,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-remark-images@npm:^6.18.0":
-  version: 6.18.0
-  resolution: "gatsby-remark-images@npm:6.18.0"
+"gatsby-remark-images@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "gatsby-remark-images@npm:7.0.0"
   dependencies:
     "@babel/runtime": ^7.15.4
-    "@gatsbyjs/potrace": ^2.2.0
+    "@gatsbyjs/potrace": ^2.3.0
     chalk: ^4.1.2
     cheerio: ^1.0.0-rc.10
-    gatsby-core-utils: ^3.18.0
+    gatsby-core-utils: ^4.0.0
     is-relative-url: ^3.0.0
     lodash: ^4.17.21
     mdast-util-definitions: ^4.0.0
@@ -12214,9 +12288,9 @@ __metadata:
     unist-util-select: ^3.0.4
     unist-util-visit-parents: ^3.1.1
   peerDependencies:
-    gatsby: ^4.0.0-next
-    gatsby-plugin-sharp: ^4.0.0-next
-  checksum: f9c35dfe4830e5ea26247d4e007335e371c0b26c861d68823f41e7b5eec07f23c96a6b1b4002ee768d294d63d74b68ef9025322363440fcf84f850be09d6fb2d
+    gatsby: ^5.0.0-next
+    gatsby-plugin-sharp: ^5.0.0-next
+  checksum: 3b66b5b3b44a56e6d8cbaa68f3d73c2d670a9dc2a240b30be143207f900d7bfd9ce56642ff05aecc3542e6ee9183cff021dced4d3dca517ec92fa9c5d4d53d31
   languageName: node
   linkType: hard
 
@@ -14645,6 +14719,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jimp-compact@npm:^0.16.1-2":
+  version: 0.16.1
+  resolution: "jimp-compact@npm:0.16.1"
+  checksum: 5a1c62d70881b31f79ea65fecfe03617be0eb56139bc451f37e8972365c99ac3b52c5176c446ff27144c98ab664a99107ae08d347044e94e1de637f165b41a57
+  languageName: node
+  linkType: hard
+
 "jimp@npm:^0.16.1":
   version: 0.16.1
   resolution: "jimp@npm:0.16.1"
@@ -15264,6 +15345,39 @@ __metadata:
     "@lmdb/lmdb-win32-x64":
       optional: true
   checksum: 3362dc2b03c6fbdfc02291001007e4096767476e65fbf8d5e332ef473946a0d108319748ef5974ebb84cf6ffa4015c039920f130bcc09c03a751b03a9fd93dff
+  languageName: node
+  linkType: hard
+
+"lmdb@npm:2.5.3":
+  version: 2.5.3
+  resolution: "lmdb@npm:2.5.3"
+  dependencies:
+    "@lmdb/lmdb-darwin-arm64": 2.5.3
+    "@lmdb/lmdb-darwin-x64": 2.5.3
+    "@lmdb/lmdb-linux-arm": 2.5.3
+    "@lmdb/lmdb-linux-arm64": 2.5.3
+    "@lmdb/lmdb-linux-x64": 2.5.3
+    "@lmdb/lmdb-win32-x64": 2.5.3
+    msgpackr: ^1.5.4
+    node-addon-api: ^4.3.0
+    node-gyp: latest
+    node-gyp-build-optional-packages: 5.0.3
+    ordered-binary: ^1.2.4
+    weak-lru-cache: ^1.2.2
+  dependenciesMeta:
+    "@lmdb/lmdb-darwin-arm64":
+      optional: true
+    "@lmdb/lmdb-darwin-x64":
+      optional: true
+    "@lmdb/lmdb-linux-arm":
+      optional: true
+    "@lmdb/lmdb-linux-arm64":
+      optional: true
+    "@lmdb/lmdb-linux-x64":
+      optional: true
+    "@lmdb/lmdb-win32-x64":
+      optional: true
+  checksum: 8dd33d46878e28029d62cab8bfa491da0f06428eb9f3cc63b8b1d9464fb3bdb46bddaf4caa5b1a0af5815cec288102aae0cb411a48e79c5514df566ddcb3a4c4
   languageName: node
   linkType: hard
 
