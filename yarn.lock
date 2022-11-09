@@ -72,7 +72,7 @@ __metadata:
     gatsby: ^4.18.0
     gatsby-plugin-algolia: ^0.26.0
     gatsby-plugin-emotion: ^7.18.0
-    gatsby-plugin-layout: ^3.18.0
+    gatsby-plugin-layout: ^4.0.0
     gatsby-plugin-mdx: ^3.18.0
     gatsby-plugin-mdx-embed: ^1.0.0
     gatsby-plugin-preact: ^6.18.0
@@ -11974,14 +11974,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-layout@npm:^3.18.0":
-  version: 3.18.0
-  resolution: "gatsby-plugin-layout@npm:3.18.0"
+"gatsby-plugin-layout@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "gatsby-plugin-layout@npm:4.0.0"
   dependencies:
     "@babel/runtime": ^7.15.4
   peerDependencies:
-    gatsby: ^4.0.0-next
-  checksum: da13d02424f861a31fc1e3b41d93609c6be3911628e64a5c254a26fb9ff324d2c7cf8693335066e8acc6fa76929ebaa79d0c2548fb794e4f26ab3b8b4b312dec
+    gatsby: ^5.0.0-next
+  checksum: cafa62f7638192e4ef7aeecfaf4ae4752854ebcb2742de2470568bb174a0121d848a460c8c367d8c4f335ad9c634ed40c27c85c00e0985c0a2121ef6b755d555
   languageName: node
   linkType: hard
 
