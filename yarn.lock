@@ -67,7 +67,7 @@ __metadata:
     await-exec: ^0.1.2
     builtin-status-codes: ^3.0.0
     classnames: ^2.3.1
-    core-js: ^3.23.3
+    core-js: ^3.26.1
     dotenv: ^16.0.1
     gatsby: ^4.18.0
     gatsby-plugin-algolia: ^0.26.0
@@ -8878,10 +8878,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.22.3, core-js@npm:^3.23.3":
+"core-js@npm:^3.22.3":
   version: 3.23.4
   resolution: "core-js@npm:3.23.4"
   checksum: 1317591dbd4a6dc357b68da324dfab52ffecc0193fe577c55bedc058af3ec96a47c7d68dff4dc914badf398ca120c0b58815fca3a162a497abf73166910d834c
+  languageName: node
+  linkType: hard
+
+"core-js@npm:^3.26.1":
+  version: 3.26.1
+  resolution: "core-js@npm:3.26.1"
+  checksum: 0a01149f51ff1e9f41d1ea49cc4c9222047949ea597189ede7c4cf8cde3b097766b9c7615acc77c86fe65b4002f20b638a133dfba7b41dba830d707aeeed45ad
   languageName: node
   linkType: hard
 
