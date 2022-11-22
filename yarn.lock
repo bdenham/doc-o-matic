@@ -6467,7 +6467,7 @@ __metadata:
     axe-core: ^4.4.2
     cypress: ^8.7.0
     cypress-axe: ^0.14.0
-    gatsby-cypress: ^1.14.0
+    gatsby-cypress: ^3.1.0
     gatsby-source-github-api: ^1.0.0
     husky: ^8.0.1
     lerna: ^5.1.8
@@ -11857,15 +11857,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-cypress@npm:^1.14.0":
-  version: 1.14.0
-  resolution: "gatsby-cypress@npm:1.14.0"
+"gatsby-cypress@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "gatsby-cypress@npm:3.1.0"
   dependencies:
     "@babel/runtime": ^7.15.4
   peerDependencies:
-    cypress: ^3.1.0
-    gatsby: ^3.0.0-next.0
-  checksum: f115f9e255f2cbab24cadbe3ac6db11322306a9c498021188e8e04cc119e15f7270f2c38629320c1b25bac492d1b4ec54e596afdcd3f7a3ee9186fa0a0111560
+    cypress: ^9.0.0 || ^10.0.0
+    gatsby: ^5.0.0-next
+  checksum: 6086251b2d7f7f6079df5b4b0aabc99803b6d328ff77b028e7274d1771e2a9c313423f9d3553bc14847f0ff7d4cb65b92e6014286f955376f86a1eeafb77e6a3
   languageName: node
   linkType: hard
 
