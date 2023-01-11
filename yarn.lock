@@ -1737,6 +1737,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.20.7":
+  version: 7.20.7
+  resolution: "@babel/runtime@npm:7.20.7"
+  dependencies:
+    regenerator-runtime: ^0.13.11
+  checksum: 4629ce5c46f06cca9cfb9b7fc00d48003335a809888e2b91ec2069a2dcfbfef738480cff32ba81e0b7c290f8918e5c22ddcf2b710001464ee84ba62c7e32a3a3
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.12.7, @babel/template@npm:^7.16.7, @babel/template@npm:^7.18.6":
   version: 7.18.6
   resolution: "@babel/template@npm:7.18.6"
@@ -6467,7 +6476,7 @@ __metadata:
     axe-core: ^4.4.2
     cypress: ^8.7.0
     cypress-axe: ^0.14.0
-    gatsby-cypress: ^1.14.0
+    gatsby-cypress: ^3.4.0
     gatsby-source-github-api: ^1.0.0
     husky: ^8.0.1
     lerna: ^5.1.8
@@ -11857,15 +11866,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-cypress@npm:^1.14.0":
-  version: 1.14.0
-  resolution: "gatsby-cypress@npm:1.14.0"
+"gatsby-cypress@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "gatsby-cypress@npm:3.4.0"
   dependencies:
-    "@babel/runtime": ^7.15.4
+    "@babel/runtime": ^7.20.7
   peerDependencies:
-    cypress: ^3.1.0
-    gatsby: ^3.0.0-next.0
-  checksum: f115f9e255f2cbab24cadbe3ac6db11322306a9c498021188e8e04cc119e15f7270f2c38629320c1b25bac492d1b4ec54e596afdcd3f7a3ee9186fa0a0111560
+    cypress: ^9.0.0 || ^10.0.0
+    gatsby: ^5.0.0-next
+  checksum: 604d3338b4216480aeef5ba8bce084ffae653c527a81a9ef61f77eaef127cf42043c268844243b3f60d10fc4df1dffb238f737e6ae8865add80a364361b3cf58
   languageName: node
   linkType: hard
 
@@ -19987,6 +19996,13 @@ __metadata:
   version: 1.4.2
   resolution: "regenerate@npm:1.4.2"
   checksum: 3317a09b2f802da8db09aa276e469b57a6c0dd818347e05b8862959c6193408242f150db5de83c12c3fa99091ad95fb42a6db2c3329bfaa12a0ea4cbbeb30cb0
+  languageName: node
+  linkType: hard
+
+"regenerator-runtime@npm:^0.13.11":
+  version: 0.13.11
+  resolution: "regenerator-runtime@npm:0.13.11"
+  checksum: 27481628d22a1c4e3ff551096a683b424242a216fee44685467307f14d58020af1e19660bf2e26064de946bad7eff28950eae9f8209d55723e2d9351e632bbb4
   languageName: node
   linkType: hard
 
