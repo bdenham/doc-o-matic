@@ -108,7 +108,7 @@ __metadata:
     swiper: ^7.4.1
     to-arraybuffer: ^1.0.1
     tty-browserify: ^0.0.1
-    unist-util-select: 2.0.2
+    unist-util-select: 4.0.3
     uuid: ^8.3.2
   peerDependencies:
     gatsby: ^4.18.0
@@ -9209,7 +9209,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-selector-parser@npm:^1.0.0, css-selector-parser@npm:^1.1.0":
+"css-selector-parser@npm:^1.0.0":
   version: 1.4.1
   resolution: "css-selector-parser@npm:1.4.1"
   checksum: 31948754e579eedb918c2fb2d5a4c643ec769ff4a0d03a7bd10b43b25d44973f8cbe86d7ec00c4494269f7ff38b3d2ab0f6ea801cece0ef0974e74469dff770c
@@ -17438,7 +17438,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nth-check@npm:^1.0.1, nth-check@npm:^1.0.2, nth-check@npm:~1.0.1":
+"nth-check@npm:^1.0.2, nth-check@npm:~1.0.1":
   version: 1.0.2
   resolution: "nth-check@npm:1.0.2"
   dependencies:
@@ -23039,16 +23039,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"unist-util-select@npm:2.0.2":
-  version: 2.0.2
-  resolution: "unist-util-select@npm:2.0.2"
+"unist-util-select@npm:4.0.3":
+  version: 4.0.3
+  resolution: "unist-util-select@npm:4.0.3"
   dependencies:
-    css-selector-parser: ^1.1.0
-    not: ^0.1.0
-    nth-check: ^1.0.1
-    unist-util-is: ^3.0.0
-    zwitch: ^1.0.3
-  checksum: 5f356bfa4e8fca4b3805768ca4a2e425c7d2a8c664c25fbf7d4d1e7108ecd6b4ed358bf599135164a3ed901c7fa8607bb312ef3778b2e370bc5e61617bed3cdc
+    "@types/unist": ^2.0.0
+    css-selector-parser: ^1.0.0
+    nth-check: ^2.0.0
+    zwitch: ^2.0.0
+  checksum: 73125de1bd2e4bef0cdcffa3d7ac65f55ed9572733d03c52b785d09d1e4050d131e981f937d1d92cf9f9de61f24e85a1c9f7bb0a097ca3780ec5931d8a124c64
   languageName: node
   linkType: hard
 
@@ -24331,9 +24330,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zwitch@npm:^1.0.0, zwitch@npm:^1.0.3":
+"zwitch@npm:^1.0.0":
   version: 1.0.5
   resolution: "zwitch@npm:1.0.5"
   checksum: 28a1bebacab3bc60150b6b0a2ba1db2ad033f068e81f05e4892ec0ea13ae63f5d140a1d692062ac0657840c8da076f35b94433b5f1c329d7803b247de80f064a
+  languageName: node
+  linkType: hard
+
+"zwitch@npm:^2.0.0":
+  version: 2.0.4
+  resolution: "zwitch@npm:2.0.4"
+  checksum: f22ec5fc2d5f02c423c93d35cdfa83573a3a3bd98c66b927c368ea4d0e7252a500df2a90a6b45522be536a96a73404393c958e945fdba95e6832c200791702b6
   languageName: node
   linkType: hard
