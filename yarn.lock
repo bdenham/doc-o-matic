@@ -105,7 +105,7 @@ __metadata:
     sharp: ^0.30.7
     stream-http: ^3.2.0
     styled-components: ^5.3.5
-    swiper: ^7.4.1
+    swiper: ^8.4.7
     to-arraybuffer: ^1.0.1
     tty-browserify: ^0.0.1
     unist-util-select: 2.0.2
@@ -10008,7 +10008,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dom7@npm:^4.0.2":
+"dom7@npm:^4.0.4":
   version: 4.0.4
   resolution: "dom7@npm:4.0.4"
   dependencies:
@@ -22069,13 +22069,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"swiper@npm:^7.4.1":
-  version: 7.4.1
-  resolution: "swiper@npm:7.4.1"
+"swiper@npm:^8.4.7":
+  version: 8.4.7
+  resolution: "swiper@npm:8.4.7"
   dependencies:
-    dom7: ^4.0.2
+    dom7: ^4.0.4
     ssr-window: ^4.0.2
-  checksum: 996339afa86a0200564d2418b9f5a5f222cb91a5fec7a1ee3123e47a8978b7458fedeb87c7dfeb86ad0559c2bef3e20779a87d71987e9d36b5651fa9dada9a2c
+  checksum: c52be6105e12984ba024f8cb4c0627919d4069172c0021ed7c5743c3709b5a814dd50d134813ea4f7019048be6ff9dda96db8f1adf38e317c8bb285574fcd006
   languageName: node
   linkType: hard
 
