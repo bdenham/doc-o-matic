@@ -72,7 +72,7 @@ __metadata:
     gatsby: ^4.18.0
     gatsby-plugin-algolia: ^0.26.0
     gatsby-plugin-emotion: ^7.18.0
-    gatsby-plugin-layout: ^3.18.0
+    gatsby-plugin-layout: ^4.7.0
     gatsby-plugin-mdx: ^3.18.0
     gatsby-plugin-mdx-embed: ^1.0.0
     gatsby-plugin-preact: ^6.18.0
@@ -1734,6 +1734,15 @@ __metadata:
   dependencies:
     regenerator-runtime: ^0.13.4
   checksum: 8b707b64ae0524db617d0c49933b258b96376a38307dc0be8fb42db5697608bcc1eba459acce541e376cff5ed5c5287d24db5780bd776b7c75ba2c2e26ff8a2c
+  languageName: node
+  linkType: hard
+
+"@babel/runtime@npm:^7.20.13":
+  version: 7.21.0
+  resolution: "@babel/runtime@npm:7.21.0"
+  dependencies:
+    regenerator-runtime: ^0.13.11
+  checksum: 7b33e25bfa9e0e1b9e8828bb61b2d32bdd46b41b07ba7cb43319ad08efc6fda8eb89445193e67d6541814627df0ca59122c0ea795e412b99c5183a0540d338ab
   languageName: node
   linkType: hard
 
@@ -11974,14 +11983,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-layout@npm:^3.18.0":
-  version: 3.18.0
-  resolution: "gatsby-plugin-layout@npm:3.18.0"
+"gatsby-plugin-layout@npm:^4.7.0":
+  version: 4.7.0
+  resolution: "gatsby-plugin-layout@npm:4.7.0"
   dependencies:
-    "@babel/runtime": ^7.15.4
+    "@babel/runtime": ^7.20.13
   peerDependencies:
-    gatsby: ^4.0.0-next
-  checksum: da13d02424f861a31fc1e3b41d93609c6be3911628e64a5c254a26fb9ff324d2c7cf8693335066e8acc6fa76929ebaa79d0c2548fb794e4f26ab3b8b4b312dec
+    gatsby: ^5.0.0-next
+  checksum: 3519fe824b3d9b3e0a717ff293fd73db64e19a6f64211725e94283ab3adc62071d4533650800e4542e829e586d6396585e163d178cbe4fced8855bafc3128e7d
   languageName: node
   linkType: hard
 
@@ -19987,6 +19996,13 @@ __metadata:
   version: 1.4.2
   resolution: "regenerate@npm:1.4.2"
   checksum: 3317a09b2f802da8db09aa276e469b57a6c0dd818347e05b8862959c6193408242f150db5de83c12c3fa99091ad95fb42a6db2c3329bfaa12a0ea4cbbeb30cb0
+  languageName: node
+  linkType: hard
+
+"regenerator-runtime@npm:^0.13.11":
+  version: 0.13.11
+  resolution: "regenerator-runtime@npm:0.13.11"
+  checksum: 27481628d22a1c4e3ff551096a683b424242a216fee44685467307f14d58020af1e19660bf2e26064de946bad7eff28950eae9f8209d55723e2d9351e632bbb4
   languageName: node
   linkType: hard
 
